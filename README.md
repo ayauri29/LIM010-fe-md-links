@@ -355,4 +355,4 @@ si tienes dudas existenciales con respecto a estas decisiones. No existe una
 - [Pill de recursión - repositorio](https://github.com/merunga/pildora-recursion)
 
 ## Diagrama de flujo
-![Diagrama de flujo](https://user-images.githubusercontent.com/33959688/64657482-45084c80-d3f9-11e9-9173-ddf6d60fe2e3.png)
+![Diagrama en blanco](https://user-images.githubusercontent.com/33959688/64657482-45084c80-d3f9-11e9-9173-ddf6d60fe2e3.png)
