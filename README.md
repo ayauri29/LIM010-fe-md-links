@@ -353,3 +353,6 @@ si tienes dudas existenciales con respecto a estas decisiones. No existe una
 - [Comprendiendo Promesas en Js](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1)
 - [Pill de recursión - video](https://www.youtube.com/watch?v=lPPgY3HLlhQ&t=916s)
 - [Pill de recursión - repositorio](https://github.com/merunga/pildora-recursion)
+
+## Diagrama de flujo
+![Diagrama de flujo](https://user-images.githubusercontent.com/33959688/64657482-45084c80-d3f9-11e9-9173-ddf6d60fe2e3.png)

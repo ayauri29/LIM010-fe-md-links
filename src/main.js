@@ -1,19 +1,17 @@
-#!/usr/bin/env node
 const isValid = require('is-valid-path');
+const path = require('path');
+const slash = require('slash');
 
-/**
- * Validar si es una ruta válida o no
- * @param  {string}
- * @return  {boolean}
- */
-export const validatePath = (path) => (isValid(path) ? true : false);
+export const validatePath = (firstPath) => {
+  if (isValid(firstPath)) {
+    return true;
+  }
+  return false;
+};
 
-/**
- * Leer el path y preguntar si la ruta es absoluta, si es relativa la convierte en absoluta
- * @param  {string}
- * @return  {string}
- * if(path isAbolute() return path)
- * if(path isRelative() convertToAbsolute)
- * path.resolve() => convierte a ruta absoluta
- */
-export const getAbsolutePath = (path) => path;
+export const getAbsolutePath = (firstPath) => {
+  if (path.isAbsolute(firstPath)) {
+    return firstPath;
+  }
+  return slash(path.resolve(firstPath));
+};
