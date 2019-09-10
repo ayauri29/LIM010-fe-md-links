@@ -1,0 +1,45 @@
+{
+  "name": "md-links",
+  "version": "1.0.0",
+  "description": "Md-links @ Laboratoria",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^18.0.1",
+    "express": "^4.17.1",
+    "is-valid-path": "^0.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-install": "2.1.0",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "eslint": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "eslint": "eslint --ext .js src/ test/",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayauri29/LIM010-fe-md-links.git"
+  },
+  "keywords": [
+    "javascript",
+    "jest",
+    "md-links"
+  ],
+  "author": "Alba Liliana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ayauri29/LIM010-fe-md-links/issues"
+  },
+  "homepage": "https://github.com/ayauri29/LIM010-fe-md-links#readme"
+}
