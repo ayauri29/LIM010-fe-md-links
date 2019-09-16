@@ -10,6 +10,7 @@
     "eslint-config-airbnb": "^18.0.1",
     "express": "^4.17.1",
     "is-valid-path": "^0.1.1",
+    "marked": "^0.7.0",
     "slash": "^3.0.0"
   },
   "devDependencies": {
