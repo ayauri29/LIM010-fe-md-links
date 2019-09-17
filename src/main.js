@@ -1,7 +1,6 @@
 const marked = require('marked');
 const path = require('path');
 const fs = require('fs');
-const { XMLHttpRequest } = require('xmlhttprequest');
 
 const getAbsolutePath = (route) => {
   if (path.isAbsolute(route)) {
@@ -10,19 +9,9 @@ const getAbsolutePath = (route) => {
   return path.resolve(route);
 };
 
-const isDirectory = (route) => {
-  if (fs.statSync(route).isDirectory()) {
-    return true;
-  }
-  return false;
-};
+const isDirectory = (route) => fs.statSync(route).isDirectory();
 
-const isFile = (route) => {
-  if (fs.statSync(route).isFile()) {
-    return true;
-  }
-  return false;
-};
+const isFile = (route) => fs.statSync(route).isFile();
 
 const isMd = (route) => {
   if (path.extname(route) === '.md') {
