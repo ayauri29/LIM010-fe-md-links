@@ -1,6 +1,7 @@
 const marked = require('marked');
 const path = require('path');
 const fs = require('fs');
+const { XMLHttpRequest } = require('xmlhttprequest');
 
 const getAbsolutePath = (route) => {
   if (path.isAbsolute(route)) {
@@ -66,23 +67,7 @@ const saveLinks = (arrayOfRoutes) => {
   });
   return arrayofLinks;
 };
-/*
-const file = fs.readFileSync(path.join(process.cwd(), '..', 'dir test', 'first.md'));
-const getLink = () => {
-  const render = new marked.Renderer();
-  // Debería guardar en un array de objetos href, text, file
-  render.link = (href, title, text) => {
-    const concat = `${title}, ${href}, ${text}`;
-    return concat;
-  };
-  return render;
-};
-console.log(marked(file.toString()));
-console.log(marked(file.toString(), {
-  renderer: getLink(),
-}));
-*/
-// console.log(loopArray(path.join(process.cwd(), '..', 'dir test')));
+
 module.exports = {
   getAbsolutePath,
   isDirectory,

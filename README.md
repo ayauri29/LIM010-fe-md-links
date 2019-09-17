@@ -243,8 +243,8 @@ para usarlo programáticamente.
 
 ## Objetivos de aprendizaje
 
-Recuerda colocar en esta seccion los objetivos de aprendizaje que quedaron 
-pendientes de tu proyecto anterior.
+### Objetivos de aprendizaje pendientes
+- [ ] Uso de callbacks
 
 ### Javascript
 - [ ] Uso de callbacks
