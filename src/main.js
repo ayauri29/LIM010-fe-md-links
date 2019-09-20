@@ -38,7 +38,7 @@ const saveLinksMds = (inputRoute) => {
     render.link = (hrefFile, titleFile, textFile) => {
       // Guardar los links en un array de objetos
       arrayofLinks.push({
-        href: hrefFile, title: titleFile, text: textFile, path: route,
+        href: hrefFile, text: textFile, path: route,
       });
     };
     marked(file.toString(), {

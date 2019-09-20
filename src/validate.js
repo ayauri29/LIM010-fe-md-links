@@ -11,59 +11,35 @@ const array = [
 
 // 200 - 400  Ok
 const validateLink = (arrayOfLinks) => {
-  const arrayPromises = arrayOfLinks.map((link) => {
-    return fetch(link.href)
-      .then((response) => {
-        if (response.status >= 200 && response.status < 400) {
-          link.status = response.status;
-          link.statusText = response.statusText;
-        } else {
-          link.status = response.status;
-          link.statusText = 'FAIL';
-        }
-        return link;
-      })
-      .catch(() => {
-        link.status = 'ERR';
-        link.statusText = 'FAIL';
-        return link;
-      });
-  });
+  const arrayPromises = arrayOfLinks.map((link) => fetch(link.href)
+    .then((response) => {
+      if (response.status >= 200 && response.status < 400) {
+        return {
+          ...link,
+          status: response.status,
+          statusText: response.statusText,
+        };
+        // link.status = response.status;
+        // link.statusText = response.statusText;
+      }
+      return {
+        ...link,
+        status: response.status,
+        statusText: 'FAIL',
+      };
+      // link.status = response.status;
+      // link.statusText = 'FAIL';
+    })
+    .catch(() => ({
+      ...link,
+      status: 'ERR',
+      statusText: 'FAIL',
+    })));
+  // link.status = 'ERR';
+  // link.statusText = 'FAIL';
+  // return link;
   return Promise.all(arrayPromises);
 };
-/* const validateLink = (objectLinks) => {
-  // const arrayLinks = objectLinks.map((links) => links.href);
-  const arrayPromises = [];
-  objectLinks.forEach((link) => {
-    const promise = new Promise((resolve) => {
-      return fetch(link.href)
-        .then((response) => {
-          if (response.status >= 200 && response.status < 400) {
-            link.status = response.status;
-            link.statusText = response.statusText;
-            // console.log(objectLinks);
-            resolve(link);
-          } else {
-            link.status = response.status;
-            link.statusText = 'FAIL';
-            // console.log(objectLinks);
-            resolve(link);
-          }
-        })
-        .catch(() => {
-          link.status = 'ERR';
-          link.statusText = 'FAIL';
-          // console.log(objectLinks);
-          resolve(link);
-        });
-    });
-    arrayPromises.push(promise);
-  });
-  return Promise.all(arrayPromises);
-  /* .then((resolve) => {
-    console.log(resolve)
-  });
-}; */
 
 validateLink(array);
 
