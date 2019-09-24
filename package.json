@@ -1,5 +1,5 @@
 {
-  "name": "md-links",
+  "name": "@ayauri29/md-links",
   "version": "1.0.0",
   "description": "Md-links @ Laboratoria",
   "main": ".eslintrc.js",
@@ -27,6 +27,9 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.17.0",
     "jest": "^24.9.0"
+  },
+  "bin": {
+    "md-links": "cli.js"
   },
   "scripts": {
     "build": "babel src -d lib",

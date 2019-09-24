@@ -54,10 +54,10 @@ describe('Find the MD file', () => {
     expect(typeof route.searchMds).toBe('function');
   });
   it('Debería retornar el file con extensión MD', () => {
-    expect(route.searchMds(path.join(process.cwd(), 'dir test'))[0]).toBe(path.join(process.cwd(), 'dir test', 'first.md'));
+    expect(route.searchMds(path.join(process.cwd(), 'dir-test'))[0]).toBe(path.join(process.cwd(), 'dir-test', 'first.md'));
   });
   it('Debería retornar el file con extensión MD de un archivo dentro de otro archivo', () => {
-    expect(route.searchMds(path.join(process.cwd(), 'dir test'))[2]).toBe(path.join(process.cwd(), 'dir test', 'subdir', 'third.md'));
+    expect(route.searchMds(path.join(process.cwd(), 'dir-test'))[2]).toBe(path.join(process.cwd(), 'dir-test', 'subdir', 'third.md'));
   });
 });
 
@@ -66,12 +66,12 @@ describe('Save links', () => {
     expect(typeof route.saveLinksMds).toBe('function');
   });
   it('Debería retornar el link del primer elemento del array de links', () => {
-    expect(route.saveLinksMds(path.join(process.cwd(), 'dir test'))[0].href).toBe('https://es.wikipedia.org/wiki/Markdown');
+    expect(route.saveLinksMds(path.join(process.cwd(), 'dir-test'))[0].href).toBe('https://es.wikipedia.org/wiki/Markdown');
   });
   it('Debería retornar el texto del primer elemento del array de links', () => {
-    expect(route.saveLinksMds(path.join(process.cwd(), 'dir test'))[0].text).toBe('1');
+    expect(route.saveLinksMds(path.join(process.cwd(), 'dir-test'))[0].text).toBe('1');
   });
   it('Debería retornar la ruta del primer elemento del array de links', () => {
-    expect(route.saveLinksMds(path.join(process.cwd(), 'dir test'))[0].path).toBe(path.join(process.cwd(), 'dir test', 'first.md'));
+    expect(route.saveLinksMds(path.join(process.cwd(), 'dir-test'))[0].path).toBe(path.join(process.cwd(), 'dir-test', 'first.md'));
   });
 });
