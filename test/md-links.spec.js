@@ -53,17 +53,17 @@ describe('Md links', () => {
   });
   it('Debería retornar el link del primer elemento del array de links', () => {
     mdLinks.mdLinks(path.join(process.cwd(), 'dir-test'), { validate: false }).then((response) => {
-      expect(response).toBe(output1);
+      expect(response).toStrictEqual(output2);
     });
   });
   it('Debería retornar el link del primer elemento del array de links', () => {
     mdLinks.mdLinks('dir-test', { validate: false }).then((response) => {
-      expect(response).toBe(output1);
+      expect(response).toStrictEqual(output2);
     });
   });
   it('Debería retornar el link del primer elemento del array de links', () => {
     mdLinks.mdLinks(path.join(process.cwd(), 'dir-test'), { validate: true }).then((response) => {
-      expect(response).toBe(output2);
+      expect(response).toStrictEqual(output1);
     });
   });
   it('Debería retornar el link del primer elemento del array de links', () => {
