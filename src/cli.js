@@ -27,11 +27,11 @@ const showCli = (route, argv2, argv3) => mdLink.mdLinks(route, { validate: true 
     }
     return output;
   });
-/*
-const route = process.argv[2];
-const argv2 = process.argv[3];
-const argv3 = process.argv[4];
-showCli(route, argv2, argv3).then((data) => console.log(data)); */
+
+const route = process.argv[1];
+const argv2 = process.argv[2];
+const argv3 = process.argv[3];
+showCli(route, argv2, argv3).then((data) => console.log(data));
 
 module.exports = {
   showCli,
