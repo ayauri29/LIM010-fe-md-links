@@ -1,4 +1,21 @@
-# Markdown Links
+# ayauri29@mdlinks
+
+Md-links es una librería que brinda estadísticas sobre los links que se encuentren dentro de todos los archivos .md de una ruta dada.
+- [Diagrama de flujo del proyecto]().
+- Encontrar un board con el backlog para la implementación de la librería.
+- Encontrar la documentación técnica de la librería.
+- Encontrar la Guía de uso e instalación de la librería.
+
+## Instalación
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+npm install ayauri29@mdlinks
+```
+
+## Uso
+
 
 ## Preámbulo
 
