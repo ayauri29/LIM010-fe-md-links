@@ -30,13 +30,9 @@ const saveLinksMds = (inputRoute) => {
   const arrayOfRoutes = searchMds(inputRoute);
   const arrayofLinks = [];
   const render = new marked.Renderer();
-  // Recorrer el array de rutas
   arrayOfRoutes.forEach((route) => {
-    // Leer el archivo de la ruta
     const file = fs.readFileSync(route);
-    // Buscar los links de cada archivo
     render.link = (hrefFile, titleFile, textFile) => {
-      // Guardar los links en un array de objetos
       arrayofLinks.push({
         href: hrefFile, text: textFile, path: route,
       });

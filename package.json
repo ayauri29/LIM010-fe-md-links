@@ -1,12 +1,14 @@
 {
   "name": "@ayauri29/md-links",
   "version": "1.0.0",
-  "description": "Md-links @ Laboratoria",
-  "main": ".eslintrc.js",
+  "description": "Validate links of Markdown",
+  "main": "src/md-links.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^3.0.2",
     "eslint-config-airbnb": "^18.0.1",
     "marked": "^0.7.0",
     "node-fetch": "^2.6.0"
@@ -22,10 +24,11 @@
     "eslint": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.17.0",
+    "fetch-mock": "^7.3.9",
     "jest": "^24.9.0"
   },
   "bin": {
-    "md-links": "./src/cli.js"
+    "md-links": "src/cli.js"
   },
   "scripts": {
     "build": "babel src -d lib",
