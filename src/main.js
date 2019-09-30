@@ -34,7 +34,9 @@ const saveLinksMds = (inputRoute) => {
     const file = fs.readFileSync(route);
     render.link = (hrefFile, titleFile, textFile) => {
       arrayofLinks.push({
-        href: hrefFile, text: textFile, path: route,
+        href: hrefFile,
+        text: textFile.substring(0, 50),
+        path: route,
       });
     };
     marked(file.toString(), {
