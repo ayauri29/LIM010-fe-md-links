@@ -90,31 +90,31 @@ md-links <path-to-file> [options]
 #### Objetivos de aprendizaje
 
 ##### Objetivos de aprendizaje pendientes
-- [ ] Uso de callbacks
+- [x] Uso de callbacks
 
 ##### Javascript
-- [ ] Consumo de Promesas
-- [ ] Creacion de Promesas
-- [ ] Modulos de Js
-- [ ] Recursión
+- [x] Consumo de Promesas
+- [x] Creacion de Promesas
+- [x] Modulos de Js
+- [x] Recursión
 
 ### Node
-- [ ] Sistema de archivos
-- [ ] package.json
-- [ ] crear modules
-- [ ] Instalar y usar modules
-- [ ] npm scripts
-- [ ] CLI (Command Line Interface - Interfaz de Línea de Comando)
+- [x] Sistema de archivos
+- [x] package.json
+- [x] crear modules
+- [x] Instalar y usar modules
+- [x] npm scripts
+- [x] CLI (Command Line Interface - Interfaz de Línea de Comando)
 
 ### Testing
-- [ ] Testeo de tus funciones
-- [ ] Testeo asíncrono
-- [ ] Uso de librerias de Mock
-- [ ] Mocks manuales
-- [ ] Testeo para multiples Sistemas Operativos
+- [x] Testeo de tus funciones
+- [x] Testeo asíncrono
+- [x] Uso de librerias de Mock
+- [x] Mocks manuales
+- [x] Testeo para multiples Sistemas Operativos
 
 ### Git y Github
-- [ ] Organización en Github
+- [x] Organización en Github
 
 ### Buenas prácticas de desarrollo
 - [ ] Modularización
