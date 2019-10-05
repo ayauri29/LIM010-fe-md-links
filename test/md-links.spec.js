@@ -6,39 +6,37 @@ fetchMock.config.sendAsJson = false;
 fetchMock
   .mock('https://es.wikipedia.org/wiki/Markdown', 200)
   .mock('https://github.com', 200)
-  .mock('https://eswikipedia.org/wiki/Markdown', 'ERR')
+  .mock('https://eswikipedia.org/wiki/Markdown', () => {
+    throw new Error('ERROR_MESSAGE');
+  })
   .mock('http://www.wheresrhys.co.uk/fetch-mock_reset', 404);
 
 const output1 = [
   {
     href: 'https://es.wikipedia.org/wiki/Markdown',
     text: '1',
-    path:
-      'C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md',
+    path: path.join(process.cwd(), 'dir-test', 'first.md'),
     status: 200,
     statusText: 'OK',
   },
   {
     href: 'https://github.com',
     text: '2',
-    path:
-      'C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md',
+    path: path.join(process.cwd(), 'dir-test', 'first.md'),
     status: 200,
     statusText: 'OK',
   },
   {
     href: 'https://eswikipedia.org/wiki/Markdown',
     text: '3',
-    path:
-      'C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md',
-    status: 200,
-    statusText: 'OK',
+    path: path.join(process.cwd(), 'dir-test', 'first.md'),
+    status: 'ERR',
+    statusText: 'FAIL',
   },
   {
     href: 'http://www.wheresrhys.co.uk/fetch-mock_reset',
     text: '4',
-    path:
-      'C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md',
+    path: path.join(process.cwd(), 'dir-test', 'first.md'),
     status: 404,
     statusText: 'FAIL',
   }];
@@ -47,26 +45,22 @@ const output2 = [
   {
     href: 'https://es.wikipedia.org/wiki/Markdown',
     text: '1',
-    path:
-      'C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md',
+    path: path.join(process.cwd(), 'dir-test', 'first.md'),
   },
   {
     href: 'https://github.com',
     text: '2',
-    path:
-      'C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md',
+    path: path.join(process.cwd(), 'dir-test', 'first.md'),
   },
   {
     href: 'https://eswikipedia.org/wiki/Markdown',
     text: '3',
-    path:
-      'C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md',
+    path: path.join(process.cwd(), 'dir-test', 'first.md'),
   },
   {
     href: 'http://www.wheresrhys.co.uk/fetch-mock_reset',
     text: '4',
-    path:
-      'C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md',
+    path: path.join(process.cwd(), 'dir-test', 'first.md'),
   },
 ];
 

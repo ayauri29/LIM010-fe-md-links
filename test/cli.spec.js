@@ -1,21 +1,22 @@
 const chalk = require('chalk');
+const path = require('path');
 const cli = require('../src/mdlinks-cli.js');
 const fetchMock = require('../__mocks__/node-fetch.js');
 
 fetchMock.config.sendAsJson = false;
 
 const output1 = `
-${chalk.bgBlue.black('C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md')} ${chalk.magenta('https://es.wikipedia.org/wiki/Markdown')} ${chalk.yellow('1')}
-${chalk.bgBlue.black('C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md')} ${chalk.magenta('https://github.com')} ${chalk.yellow('2')}
-${chalk.bgBlue.black('C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md')} ${chalk.magenta('https://eswikipedia.org/wiki/Markdown')} ${chalk.yellow('3')}
-${chalk.bgBlue.black('C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md')} ${chalk.magenta('http://www.wheresrhys.co.uk/fetch-mock_reset')} ${chalk.yellow('4')}`;
+${chalk.bgBlue.black(path.join(process.cwd(), 'dir-test', 'first.md'))} ${chalk.magenta('https://es.wikipedia.org/wiki/Markdown')} ${chalk.yellow('1')}
+${chalk.bgBlue.black(path.join(process.cwd(), 'dir-test', 'first.md'))} ${chalk.magenta('https://github.com')} ${chalk.yellow('2')}
+${chalk.bgBlue.black(path.join(process.cwd(), 'dir-test', 'first.md'))} ${chalk.magenta('https://eswikipedia.org/wiki/Markdown')} ${chalk.yellow('3')}
+${chalk.bgBlue.black(path.join(process.cwd(), 'dir-test', 'first.md'))} ${chalk.magenta('http://www.wheresrhys.co.uk/fetch-mock_reset')} ${chalk.yellow('4')}`;
 const output2 = `\n${chalk.cyan('Total: ')} 4 \n${chalk.cyan('Unique: ')} 4`;
 
 const output3 = `
-${chalk.bgBlue.black('C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md')} ${chalk.magenta('https://es.wikipedia.org/wiki/Markdown')} ${chalk.green('200')} ${chalk.bgGreen.black('OK')} ${chalk.yellow('1')}
-${chalk.bgBlue.black('C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md')} ${chalk.magenta('https://github.com')} ${chalk.green('200')} ${chalk.bgGreen.black('OK')} ${chalk.yellow('2')}
-${chalk.bgBlue.black('C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md')} ${chalk.magenta('https://eswikipedia.org/wiki/Markdown')} ${chalk.green('200')} ${chalk.bgGreen.black('OK')} ${chalk.yellow('3')}
-${chalk.bgBlue.black('C:\\Users\\albit\\Desktop\\Track front\\LIM010-fe-md-links\\dir-test\\first.md')} ${chalk.magenta('http://www.wheresrhys.co.uk/fetch-mock_reset')} ${chalk.red('404')} ${chalk.bgRed.black('FAIL')} ${chalk.yellow('4')}`;
+${chalk.bgBlue.black(path.join(process.cwd(), 'dir-test', 'first.md'))} ${chalk.magenta('https://es.wikipedia.org/wiki/Markdown')} ${chalk.green('200')} ${chalk.bgGreen.black('OK')} ${chalk.yellow('1')}
+${chalk.bgBlue.black(path.join(process.cwd(), 'dir-test', 'first.md'))} ${chalk.magenta('https://github.com')} ${chalk.green('200')} ${chalk.bgGreen.black('OK')} ${chalk.yellow('2')}
+${chalk.bgBlue.black(path.join(process.cwd(), 'dir-test', 'first.md'))} ${chalk.magenta('https://eswikipedia.org/wiki/Markdown')} ${chalk.green('200')} ${chalk.bgGreen.black('OK')} ${chalk.yellow('3')}
+${chalk.bgBlue.black(path.join(process.cwd(), 'dir-test', 'first.md'))} ${chalk.magenta('http://www.wheresrhys.co.uk/fetch-mock_reset')} ${chalk.red('404')} ${chalk.bgRed.black('FAIL')} ${chalk.yellow('4')}`;
 
 describe('Command line', () => {
   fetchMock

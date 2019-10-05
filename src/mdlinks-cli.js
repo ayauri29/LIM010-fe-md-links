@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const commander = require('commander');
 const chalk = require('chalk');
 const mdLink = require('../src/md-links.js');

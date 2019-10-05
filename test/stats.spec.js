@@ -1,17 +1,18 @@
+const path = require('path');
 const stat = require('../src/stats.js');
 
 const array = [
   {
-    href: 'https://docs.npmjs.com/about-npm/', text: 'nodeJs', route: 'C:/Users/albit/Desktop/Track front/LIM010-fe-md-links/dir-test/first.md', status: 200, statusText: 'OK',
+    href: 'https://docs.npmjs.com/about-npm/', text: 'nodeJs', route: path.join(process.cwd(), 'dir-test', 'first.md'), status: 200, statusText: 'OK',
   },
   {
-    href: 'https://docs.npmjs.com/aboutnpm/', text: 'nodeJs', route: 'C:/Users/albit/Desktop/Track front/LIM010-fe-md-links/dir-test/first.md', status: 404, statusText: 'FAIL',
+    href: 'https://docs.npmjs.com/aboutnpm/', text: 'nodeJs', route: path.join(process.cwd(), 'dir-test', 'first.md'), status: 404, statusText: 'FAIL',
   },
   {
-    href: 'https://docsnpmjs.com/aboutnpm/', text: 'nodeJs', route: 'C:/Users/albit/Desktop/Track front/LIM010-fe-md-links/dir-test/first.md', status: 'ERR', statusText: 'FAIL',
+    href: 'https://docsnpmjs.com/aboutnpm/', text: 'nodeJs', route: path.join(process.cwd(), 'dir-test', 'first.md'), status: 'ERR', statusText: 'FAIL',
   },
   {
-    href: 'https://docsnpmjs.com/aboutnpm/', text: 'nodeJs', route: 'C:/Users/albit/Desktop/Track front/LIM010-fe-md-links/dir-test/first.md', status: 'ERR', statusText: 'FAIL',
+    href: 'https://docsnpmjs.com/aboutnpm/', text: 'nodeJs', route: path.join(process.cwd(), 'dir-test', 'first.md'), status: 'ERR', statusText: 'FAIL',
   },
 ];
 
